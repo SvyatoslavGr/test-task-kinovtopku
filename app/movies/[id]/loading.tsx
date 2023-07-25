@@ -1,3 +1,5 @@
 export default function Loading() {
-  return <p>Идет загрузка...</p>
+  return (
+    <p className="mx-auto my-auto">Загрузка...</p>
+  )
 }

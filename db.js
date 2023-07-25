@@ -1,5 +1,5 @@
 module.exports = () => {
-  const { faker } = require('@faker-js/faker');
+  const { fakerRU: faker } = require('@faker-js/faker');
   const data = { movies: [] }
   for (let i = 0; i < 100; i++) {
     const movie = {

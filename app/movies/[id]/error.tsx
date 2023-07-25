@@ -1,5 +1,5 @@
 'use client';
 
 export default function Error({error}: {error: Error}) {
-  return <h1>{error.message}</h1>
+  return <p className="mx-auto my-auto">{error.message}</p>
 }

@@ -1,6 +1,6 @@
 'use client';
-import MovieList from '@/compopnents/MovieList';
-import MoviesFilter from '@/compopnents/MoviesFilter';
+import MovieList from '@/components/MovieList';
+import MoviesFilter from '@/components/MoviesFilter';
 import { IMovie } from '@/models/IMovie';
 import { getMovies } from '@/services/getMovies';
 import { useEffect, useState } from 'react'
@@ -17,14 +17,10 @@ export default function Home() {
     .finally(()=> setLoading(false));
   }, [])
   
-  if (loading) {
-    return <h1>Загрузка...</h1>
-  }
-
   return (
-    <main className="flex flex-col items-center justify-between p-2">
-      <MoviesFilter setMovies={setMovies}/>
-      <MovieList movies={movies}/>
+    <main className="container mx-auto py-2 px-2 sm:px-4 grow flex flex-col">
+      <MoviesFilter setMovies={setMovies} setLoading={setLoading}/>
+      <MovieList movies={movies} loading={loading}/>
     </main>
   )
 }
